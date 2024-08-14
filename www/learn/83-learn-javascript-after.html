@@ -1,0 +1,214 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <title>CSC2274: Prof. Paul Gruhn - Learn JavaScript Lesson July 2024</title>
+      <style>
+         body {font-family: Arial, Helvetica, sans-serif;
+         background-color: white;margin: 0 auto;padding: 0 2em 1em;border: 3px solid blue;}
+         h1 {color: blue;margin-bottom: .25em;}
+         label {float: left;width: 11em;text-align: right;}
+         input {margin-left: 1em;margin-bottom: .5em;margin-right: .5em;width: 20em;}
+         span {color: red;}
+      </style>
+      <script>
+         "use strict";  /*一个JavaScript指令，用于启用严格模式。严格模式是一种以更严格的解析和错误处理来执行JavaScript代码的方法，帮助开发者避免一些常见的错误并提高代码的安全性和性能。*/
+         alert( "HI I AM HERE AT THE START")
+
+         /*定义了一个简化的函数 $，它接受一个字符串 id 作为参数，并返回具有该 id 的DOM元素。使用 $ 函数可以快速获取页面上的元素。*/
+         var $ = function (id) {  
+           return document.getElementById(id);
+         }
+         
+         var doButtonOne = function () {
+            alert( "This is Button One:Example of an Alert")
+           
+         }
+         
+         var doButtonTwo = function () {
+            var fooBar = prompt("Enter any text", "Type something here!");
+            alert( "You entered: " + fooBar ); 
+         }
+         
+         var doButtonThree = function () {
+            alert( "This is Button Three: Example of the date() object" );
+            var today = new Date();    // creates a new date() object
+            //var today1 = new Date(); // creates a new date() object
+            alert ( today.toDateString() );
+            alert ( today.getFullYear() );
+            alert ( today.getDate() );
+            alert ( today.getMonth() + 1 ); /*日期从0开始，所以这里要+1*/
+         }
+         
+         var doButtonFour = function () {
+            alert( "This is Button Four: Example of using the String() object" );
+            //var name = "Grace Hopper";
+            //var name = new String("Grace Hopper");
+            var name = document.getElementById("name").value;
+            
+            alert("var name = " + name);
+            var nameUpper = name.toUpperCase();
+            alert("toUpperCase() = " + nameUpper);
+            var nameLower = name.toLowerCase();
+            alert("toLowerCase() = " + nameLower);
+            var nameLength = name.length; // nameLength = 12
+            alert("length = " + nameLength);
+            var index = name.indexOf(" "); // index = 5
+            alert("indexOf = " + index);
+            var firstName = name.substr(0, index);
+            alert("substr() = " + firstName); 
+         }
+         
+         var doButtonFive = function () {
+            alert( "This is Button Five: Example of the 'if' statement" );
+            var age = document.getElementById("age").value;
+            alert("Your age is " + age);
+            if ( isNaN(age) ) {
+               alert ("You did not provide a NUMERIC value for your age.");
+            } else if ( age < 0 ) {
+               alert ("You haven't been born yet?");
+            } else if ( age >= 18 ) {
+               alert ("Have you registered to vote yet?");
+            } else {
+               alert ("The age is " + age + ".");
+            }
+         }
+         
+         var doButtonSix = function () {
+            alert( "This is Button Six: Example of the 'while' loop" );
+            var sumOfNumbers = 0;
+            var numberOfLoops = 10;
+            var counter = 1;
+            while (counter <= numberOfLoops) {
+               sumOfNumbers += counter;
+               // alert("SumOfNumbers = " + sumOfNumbers);  
+               counter++; // adds 1 to counter
+            }
+            alert("SumOfNumbers = " + sumOfNumbers + "\nNumberOfLoops = " + numberOfLoops);  
+         }
+         
+         var doButtonSeven = function () {
+            alert( "This is Button Seven: Example of the 'for' loop" );
+            var investment = 10000;
+            var annualRate = 7.0;
+            var years = 10;
+            var futureValue = investment;
+            var valueDisplay = "";
+            for ( var i = 1; i <= years; i++ ) {
+               futureValue += futureValue * annualRate / 100;
+               valueDisplay = valueDisplay + i + " - " + futureValue + "\n";
+            }
+            alert(futureValue); // displays 19672
+            alert(valueDisplay); 
+         }
+         
+         var doButtonEight = function () {
+            alert( "This is Button Eight: Example of arrays" );
+            var displayMonths = "The Months of the Year are \n";
+            var months = [];
+            months[0] = "January";
+            months[1] = "Febuary";
+            months[2] = "March";
+            months[3] = "April";
+            months[4] = "May";
+            months[5] = "June";
+            months[6] = "July";
+            months[7] = "August";
+            months[8] = "September";
+            months[9] = "October";
+            months[10] = "November";
+            months[11] = "December";
+            for (var i = 0 ; i < months.length; i++) {
+            //displayMonths = displayMonths + months[i] + "\n" ;
+            displayMonths = displayMonths + months[i].substr(0,3).toUpperCase() + " - " + months[i] + "\n" ;
+         }
+         alert(displayMonths);
+         }
+         
+         var doButtonNine = function () {
+            var thisText = document.getElementById("mainTitle").innerHTML;
+            alert(thisText);
+            //document.getElementById("mainTitle").innerHTML = "Hello Class!";  // change the document
+            document.getElementById("mainTitle").innerHTML = newText;   //innerHTML 用于操作元素的HTML内容
+            // thisText = "Hello Class";
+         }
+         
+         var doButtonTen = function () {
+            var links = document.getElementsByTagName("a");
+            var displayLinks = "";
+            for (var i = 0 ; i < links.length; i++) {
+               displayLinks = displayLinks + links[i] + "\n" ;
+            }
+            alert(displayLinks); 
+         }
+         
+         var doButtonEleven = function () {
+            var liTags = document.getElementsByTagName("li");
+            var displayTags = "";
+            for (var i = 0 ; i < liTags.length; i++) {
+               displayTags = displayTags + liTags[i].innerHTML + "\n" ;
+            }
+
+alert(displayTags); 
+         }
+         
+         var doButtonTwelve = function () {
+            for (var i = 0 ; 5 ; i++) {
+                window.open("http://www.w3schools.com");
+            }
+         }
+         
+         window.onload = function () {
+           $("ButtonOne").onclick    = doButtonOne;
+           $("ButtonTwo").onclick    = doButtonTwo;
+           $("ButtonThree").onclick  = doButtonThree;
+           $("ButtonFour").onclick   = doButtonFour;
+           $("ButtonFive").onclick   = doButtonFive;
+           $("ButtonSix").onclick    = doButtonSix;
+           $("ButtonSeven").onclick  = doButtonSeven;
+           $("ButtonEight").onclick  = doButtonEight;
+           $("ButtonNine").onclick   = doButtonNine;
+           $("ButtonTen").onclick    = doButtonTen;
+           $("ButtonEleven").onclick = doButtonEleven;
+           $("ButtonTwelve").onclick = doButtonTwelve;
+         }
+         
+      </script>
+   </head>
+   <body>
+               <h1>CSC2274: Prof. Paul Gruhn<br>Learn JavaScript<br>July 22, 2024</h1>
+               <input type="button" id="ButtonOne"   value="Button One: alert()"><br>
+               <input type="button" id="ButtonTwo"   value="Button Two: prompt()"><br>
+               <input type="button" id="ButtonThree" value="Button Three: date() object"><br>
+               <hr>
+               <label for="name">Your Name:</label><input type="text" id="name"> <br> 
+               <input type="button" id="ButtonFour"  value="Button Four: string() object"><br>
+               <hr>
+               <label for="age">Your Age:</label><input type="text" id="age" name="age">  <br>
+               <input type="button" id="ButtonFive"  value="Button Five: 'if' statement"><br>
+               <hr>
+               <input type="button" id="ButtonSix"   value="Button Six: 'while' loop"><br>
+               <input type="button" id="ButtonSeven" value="Button Seven: 'for' loop"><br>
+               <input type="button" id="ButtonEight" value="Button Eight: arrays"><br>
+               <hr>
+               <label for="formText">New Heading:</label><input type="text" id="formText"> <br> 
+               <input type="button" id="ButtonNine"  value="Button Nine: Change the DOM"><br>
+               <hr>
+               <ul>
+                  <li><a href="http:\\www.aol.com">www.aol.com</a></li>
+                  <li><a href="http:\\www.google.com">www.google.com</a></li>
+                  <li><a href="http:\\www.yahoo.com">www.yahoo.com</a></li>
+                  <li><a href="http:\\www.bing.com">www.bing.com</a></li>
+               </ul>
+               <hr>
+               <input type="button" id="ButtonTen"    value="Button Ten: Get a list of the <a> tags"><br>
+               <input type="button" id="ButtonEleven" value="Button Eleven: Get a list of the <li> tags"><br>
+               <input type="button" id="ButtonTwelve" value="Button Twelve: New Window"><br>
+               <hr>
+   </body>
+</html>

@@ -1,0 +1,25 @@
+body{
+    background-color: #FFE3AA;
+}
+
+h1 {
+    color: #FFE3AA;
+    background-color: #553900;
+}
+
+h2 {
+    color: #804515;
+}
+
+h3 {
+    color: #804515;
+}
+
+p {
+    color: #804515;
+}
+
+.float-right {
+    float: right;
+    vertical-align: top;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--- accordion 常用的用户界面元素，通常用于显示折叠的内容块，使用户可以展开或折叠特定部分的信息。
+它通常由多个项目或面板组成，每个项目包含一个标题和一个可展开的内容区域。
+用户可以点击标题或者特定的控制按钮来展开或折叠内容，从而在界面上节省空间并提高信息的可访问性和易用性-->
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: #eee;  color: #444;
+  cursor: pointer;  padding: 18px;  width: 100%;  border: none;
+  text-align: left;  outline: none;  font-size: 15px;  transition: 0.4s;
+}
+
+.active, .accordion:hover { background-color: #ccc; }
+
+.panel {  padding: 0 18px;  display: none;  background-color: white;  overflow: hidden;}
+</style>
+
+</head>
+<body>
+
+<h2>70-accordion.html</h2>
+
+<button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Learn about your Professor:</button>
+<div class="panel">
+    <h3>Prof. Paul Gruhn</h3>
+    <img src="img/paul-gruhn.jpg">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>

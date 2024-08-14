@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>29-summer.html - Tingting Chen</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/29-summer.css">
+
+    <style>
+        .video-container {
+            position: relative;
+            width: 460px;
+            height: 321px;
+        }
+        .cover-image {
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-size: cover;
+            background-position: center;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+        .bg-green {
+            background: linear-gradient(to bottom, #D4EE9F, #55AA55);
+        }
+        .text-pink {
+            color: #FFAAAA;
+        }
+        .bg-pink {
+            background: rgba(255, 170, 170, 0.5);
+        }
+
+        .italic-gray {
+            font-style: italic; 
+            color: gray;        
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container-fluid">
+        <div class="row p-5 bg-green text-pink text-center">
+            <h1>WELCOME TO SUMMER</h1>
+            <p class="text-center italic-gray">Would you like to join me in the summer? COME ON!!</p>
+            <a href="59-contact-us.php">Contact Me</a>
+        </div>
+
+        <p></p>
+        
+        <div class="row">
+            <div class="col-md-3 bg-pink video-container">
+                <div class="cover-image" id="cover-image-1" style="background-image: url('img/summer-seaside.png');"></div>
+                <iframe width="1920" height="959" src="https://www.youtube.com/embed/lIenQMlClKI" title="在海边和朋友一起，开个派对，放歌烟花，这个夏天的结束" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-9 bg-pink p-4">
+                <p>One of my favorite things to do in the <span style="color: lightblue;">summer</span> is to go to the beach and enjoy a beach party with my friends and family. We bring fruits, sandwiches, and most importantly, alcohol, for a lively celebration. For me, the beach is not just a place to relax; it’s a place where I can rediscover joy and happiness. The refreshing sea breeze, the blue ocean, and the golden sand always help me forget the troubles of everyday life. Spending time at the beach with loved ones, chatting, playing, and enjoying each other's company is a uniquely precious experience. The summer beach offers me not just a visual treat but also mental relaxation and pleasure. Each trip to the beach is a profound experience of the beautiful life I cherish.</p>
+                <p class="italic-gray">You can click on the image to view my beach party video.</p>
+            </div>
+        </div>
+      
+        <p></p>
+
+        <div class="row">
+            <div class="col-md-9 bg-pink p-4">
+                <p>The <span style="color: lightblue;">summer</span> sun and warmth always inspire me with more energy. Unlike the cold of winter, the temperature and light of summer make me feel motivated. Outdoor exercise not only allows me to enjoy nature's gifts but also brings physical and mental pleasure. Whether running on the beach, playing ball in the park, or hiking in the mountains, the summer environment makes exercise more fun and challenging. The sun on my skin and the breeze on my face create a unique sense of freedom and relaxation during exercise. The long summer days mean more time to enjoy outdoor activities, and participating in these activities with friends or family makes each exercise session full of joy and laughter. For me, summer exercise is not just a way to stay healthy but also an excellent way to enjoy life and relieve stress.</p>
+                <p class="italic-gray">You can click on the image to view my sports video.</p>
+            </div>
+            <div class="col-md-3 bg-pink video-container">
+                <div class="cover-image" id="cover-image-2" style="background-image: url('img/summer-sports.png');"></div>
+                <iframe id="youtube-video-2" width="485" height="863" src="https://www.youtube.com/embed/SLV8D6svyk4" title="Play Badminton" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <script>
+            function setupVideoPlayer(coverImageId, videoId) {
+                document.getElementById(coverImageId).addEventListener('click', function() {
+                    this.style.display = 'none';
+                    var iframe = document.getElementById(videoId);
+                    iframe.style.display = 'block';
+                    iframe.src += "&autoplay=1";
+                });
+            }
+            setupVideoPlayer('cover-image-1', 'youtube-video-1');
+            setupVideoPlayer('cover-image-2', 'youtube-video-2');
+        </script>
+
+    </main>
+
+    <footer class="bg-secondary text-white text-center py-3">
+        <p>&copy; My 2024 Summer.</p>
+        <p>COME ON! HAVE FUN WITH ME!!</p>
+     </footer>
+</body>
+</html>

@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+      <title>58-learn-forms.html - Tingting Chen</title>
+      <!--
+         <link rel="stylesheet" type="text/css" href="css/00-template01.css">
+         -->
+      <style>
+      </style>
+   </head>
+   <body>
+      <h1>58-learn-forms.html</h1>
+      <!--
+         "id"    is used for CSS & JavaScript
+         "name"  is used for PHP or other server-side languages
+         
+         Two types of 'methods'
+         GET  = Passes FORM data in the CLEAR = NOT SECURE
+         POST = Encrypts FORM data = IS SECURE
+         
+         -->
+      <hr>
+      <form id="myform1" action="display-form-data.php" method="POST">
+         Username:<input type="text" id="username" name="username" autofocus><br><br>
+         <p>Please enter your e-mail address to subscribe to
+            our newsletter.
+         </p>
+         <p>E-Mail: <input type="text" id="email" name="email"></p>
+         Hidden:<input type="hidden" id="productid" name="productid" value="widget">
+         <br><br>
+         Password:<input type="password" id="password" name="password" maxlength="6" placeholder="Enter your password">
+         <br><br>
+         Comments:<br>
+         <textarea id="comments" name="comments"
+            rows="10" cols="50" wrap="physical" 
+            placeholder="If you have any comments,
+            please enter them here.">
+             </textarea>
+         <br><br>
+         Crust Type:<br>
+         <input type="radio" name="crust" id="crust1" value="thin"  checked>
+         <label for="crust1">Thin Crust</label><br>
+         <input type="radio" name="crust" id="crust2" value="deep">
+         <label for="crust2">Deep Dish</label><br>
+         <input type="radio" name="crust" id="crust3" value="hand">
+         <label for="crust3">Hand Tossed</label><br><br>
+         <br>
+         Gender:<br>
+         <input type="radio" name="gender" id="gender1" value="male" >
+         <label for="gender1">Male</label><br>
+         <input type="radio" name="gender" id="gender2" value="female">
+         <label for="gender2">Female</label><br>
+         <input type="radio" name="gender" id="gender3" value="na">
+         <label for="gender3">NA</label><br>
+         <br><br>
+         Toppings:<br>
+         <input type="checkbox" name="topping1" id="topping1"
+            value="pepperoni">
+         <label for="topping1">Pepperoni</label><br>
+         <input type="checkbox" name="topping2" id="topping2"
+            value="mushrooms">
+         <label for="topping2">Mushrooms</label><br>
+         <input type="checkbox" name="topping3" id="topping3"
+            value="Black Olives">
+         <label for="topping3">Black Olives</label><br><br>
+         Style:<br>
+         <select id="style_and_size" name="style_and_size">
+            <optgroup label="The New Yorker">
+               <option value="ny10">10"</option>
+               <option value="ny12">12"</option>
+               <option value="ny16">16"</option>
+            </optgroup>
+            <optgroup label="The Chicago">
+               <option value="chi10">10"</option>
+               <option value="chi12">12"</option>
+               <option value="chi16">16"</option>
+            </optgroup>
+         </select>
+         <br><br>
+         <select id="toppings" name="toppings" size="4" multiple>
+            <option value="pepperoni">Pepperoni</option>
+            <option value="sausage" selected>Sausage</option>
+            <option value="mushrooms">Mushrooms</option>
+            <option value="olives">Black olives</option>
+            ...
+         </select>
+         <hr>
+         <label for="investment">Monthly investment: </label>
+         <input type="number" id="investment" name="investment"
+            min="100" max="1000" step="100"
+            value="300"><br><br>
+         <label for="email">Your email address:</label>
+         <input type="email" id="email2" name="email2" required><br>
+         <label for="link">Your website:</label>
+         <input type="url" id="link" name="link" list="links" placeholder="http://"><br>
+         <label for="phone">Your phone number:</label>
+         <input type="tel" id="phone" name="phone" required>
+         <hr>
+         Date and time:&nbsp;&nbsp;
+         <input type="datetime" name="datetime"><br><br>
+         Local date and time:&nbsp;&nbsp;
+         <input type="datetime-local" id="datetimelocal" name="datetimelocal"><br><br>
+         Month:&nbsp;&nbsp;
+         <input type="month" id="month" name="month"><br><br>
+         Week:&nbsp;&nbsp;
+         <input type="week" id="week" name="week"><br><br>
+         Time:&nbsp;&nbsp;
+         <input type="time" id="time" name="time"><br><br>
+         Date:&nbsp;&nbsp;
+         <input type="date" id="date" name="date">
+         <hr>
+         <p>
+            <input type="submit" id="submit" name="submit" value="Submit Data"> 
+            <input type="reset" id="reset" name="reset" value="Clear all Data">
+         </p>
+         <hr>
+
+         <!--5中类型的按钮-->
+         <!--value:定义按钮上显示的文本-->
+         <button type="submit">
+            <img src="img/img-avatar.png" width="30" height="20" alt="Add to Cart">Add to Cart
+         </button>
+         <hr>
+         <input type="button" id="message" value="Alert Me">
+         <input type="submit" id="checkout" value="Checkout">
+         <input type="reset" id="resetform" value="Reset">
+         <input type="image" src="img/img-avatar.png" width="30" height="20" alt="Add to Cart">
+         <hr>
+
+      </form>
+   </body>
+</html>

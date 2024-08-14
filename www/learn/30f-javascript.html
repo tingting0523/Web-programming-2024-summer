@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Rating</title>
+    <style>
+        .rating span { cursor: pointer; font-size: 2em; color: lightgray; }
+        .rating span:hover,
+        .rating span:hover ~ span,
+        .rating span.active,
+        .rating span.active ~ span { color: gold; }
+    </style>
+</head>
+<body>
+    <h1>Rate the Recipe</h1>
+
+    <div class="rating">
+        <span data-value="5">&#9733;</span>
+        <span data-value="4">&#9733;</span>
+        <span data-value="3">&#9733;</span>
+        <span data-value="2">&#9733;</span>
+        <span data-value="1">&#9733;</span>
+    </div>
+
+    <script>
+        var ratingStars = document.querySelectorAll('.rating span');
+
+        ratingStars.forEach(function(star) {
+            star.addEventListener('click', function() {
+                var value = this.getAttribute('data-value');
+
+                ratingStars.forEach(function(s) {
+                    s.classList.remove('active');
+                    if (s.getAttribute('data-value') <= value) {
+                        s.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content= "width=device-width, initial-scale=1.0"> 
+        <title>00-template02.html - Tingting Chen</title>
+        <!-- <link rel="stylesheet" type="text/css" href="css/00-template01.css"> -->
+
+        <style>
+            /* Internal Fonts*/
+            p.f1 {font-family:Arial, Helvetica, sans-serif}
+            p.f2 {font-family: "Georgia";}
+            p.f3 {
+            font-family: "Courier New";
+            color:red;
+            padding:10px;
+            }
+            p.f4 {
+            font-family: "Brush Script MT";
+            font-weight: bolder;
+            background-color: brown;
+            color: darkkhaki;
+            padding: 20px;
+            }
+            p.f5 {font-family: "Comic Sans MS";}
+
+            .f4 {
+            font-family: "Brush Script MT";
+            font-weight: bolder;
+            background-color: brown;
+            color: darkkhaki;
+            padding: 20px;
+            }
+
+            /* Downloaded Fonts */
+            @font-face {font-family: marker; src: url('fonts/MarkerFelt.ttc');}
+            @font-face {font-family: ravie; src: url('fonts/RAVIE.TTF');}
+
+            .ravie {font-family: ravie; }
+            .marker {font-family: marker;}
+            .markerRed {font-family: marker; color:red;}
+            .markerBlue {font-family: marker; color:blue;}
+
+            /* Google Fonts */
+            p.g1 {font-family:"Lobster",cursive;}
+            p.g2 {font-family:"Chicle",sans-serif;}
+            p.g3 {font-family:"Notable",sans-serif;} 
+
+            h2.g3 {font-family:"Notable",sans-serif;} 
+
+            /* Build a Custom Font Class */
+            .myFont {
+                font-family: "Comic Sans MS";
+                color:red; 
+                background-color: yellow;
+                padding:30px;
+                border-style:double;
+                border-color:green;
+            }
+
+            h1.impact {
+                font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                color:crimson;
+            }
+
+        </style>
+
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">   <!--什么作用？-->>
+<link href="https://fonts.googleapis.com/css2?family=Chicle&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet"> 
+
+    </head>
+
+    <body>
+        <h1>54-fonts.html</h1>
+        <h1 class="f4">54-fonts.html</h1>  <!-- This will use the .f4 class selector -->
+        <h1 class="marker">54-fonts.html - marker</h1>
+        <h1 class="ravie">54-fonts.html - ravie</h1>
+        <h1 class="impact">54-fonts.html - impact</h1>
+
+        <h2>No Styling - serif</h2>
+        <p>
+            lll ddd ssss vvv ddd ssss www  dff rrrr ggg hhh ddd sss ggg jjj
+        </p>
+
+        <h2>With Styling, Arial - sans-serif</h2>
+        <p class="f1">
+            lll ddd ssss vvv ddd ssss www  dff rrrr ggg hhh ddd sss ggg jjj
+        </p>
+
+        <h2>Georgia Font</h2>
+        <p class="f2">
+            lll ddd ssss vvv ddd ssss www  dff rrrr ggg hhh ddd sss ggg jjj
+        </p>
+
+        <h2>Courier New Font</h2>
+        <p class="f3">
+            lll ddd ssss vvv ddd ssss www  dff rrrr ggg hhh ddd sss ggg jjj
+        </p>
+
+        <h2>Brush Script MT</h2>
+        <p class="f4"> <!-- This will use the p.f4 element class selector -->
+            lll ddd ssss vvv ddd ssss www  dff rrrr ggg hhh ddd sss ggg jjj
+        </p>
+
+        <h2>Comic Sans MS</h2>
+        <p class="f5">
+            lll ddd ssss vvv ddd ssss www  dff rrrr ggg hhh ddd sss ggg jjj
+        </p>
+        
+
+        <h2 class="markerRed">Using Class revie</h2>
+        <p class="markerBlue">
+            lll ddd ssss vvv ddd ssss www  dff rrrr ggg hhh ddd sss ggg jjj
+        </p>
+        <h2 class="ravie">Using Class revie</h2>
+        <p class="ravie">
+            lll ddd ssss vvv ddd ssss www  dff rrrr ggg hhh ddd sss ggg jjj
+        </p>
+
+        <h2 class="g1">G1 - Lobster</h2>
+        <p class="g1">
+            lll ddd ssss vvv ddd ssss www  dff rrrr ggg hhh ddd sss ggg jjj
+        </p>
+
+        <h2 class="g2">G2 - Chicle</h2>
+        <p class="g2">
+            lll ddd ssss vvv ddd ssss www  dff rrrr ggg hhh ddd sss ggg jjj
+        </p>
+
+        <h2 class="g3">G3 - Notable</h2>
+        <p class="g3">
+            lll ddd ssss vvv ddd ssss www  dff rrrr ggg hhh ddd sss ggg jjj
+        </p>
+
+        <h2 >Using myFont</h2>
+        <p class="myFont">
+            lll ddd ssss vvv ddd ssss www  dff rrrr ggg hhh ddd sss ggg jjj
+        </p>
+
+
+
+    </body>
+
+</html>

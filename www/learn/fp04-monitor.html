@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content= "width=device-width, initial-scale=1.0"> 
+        <title>fp04-monitor.html - Tingting Chen</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <style>
+            body {
+                background-color: beige;
+            }
+            section {
+                padding: 20px;
+                width: 50%;
+                border: 5px double blue;
+                color: blue;
+                font-size: 200%;
+                text-align: center;
+                font-weight: bold; 
+                border-radius: 10px 20px 0 20px;
+                box-shadow: 3px 3px 4px 4px red;
+                margin: 0 auto;
+            }
+            .result-list {
+            text-align: center; /* 确保列表项左对齐 */
+            }
+            h2 {
+                background-color: lightblue;
+                border-radius: 10px;  /* 圆角边框：单一半径，四个角相同 */
+                padding: 5px;
+                width:100%;
+                text-align: center;
+                }
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="fp01-idea.html">Idea</a>
+            <a href="fp02-design.html">Design</a>
+            <a href="fp03-framework.html">Framework</a>
+            <a href="fp04-monitor.html">Monitor</a>
+        </nav>
+
+        <p></p>
+        <section>CHECK LIST of FINAL PROJECT</section>
+        <p></p>
+ 
+        <section>
+        <form>
+            <label>
+                <input type="checkbox" name="index.html" value="index.html" checked> index.html
+            </label><br>
+            <label>
+                <input type="checkbox" name="recipes-list.html" value="recipes-list.html"> recipes-list.html
+            </label><br>
+            <div style="margin-left: 20px;">
+                <label>
+                    <input type="checkbox" name="meat.html" value="meat.html"> meat.html
+                </label><br>
+                <label>
+                    <input type="checkbox" name="vegetable.html" value="vegetable.html"> vegetable.html
+                </label><br>
+                <label>
+                    <input type="checkbox" name="staples.html" value="staples.html"> staples.html
+                </label><br>
+                <label>
+                    <input type="checkbox" name="hotpot.html" value="hotpot.html"> hotpot.html
+                </label><br>
+            </div>
+            <label>
+                <input type="checkbox" name="about-me.html" value="about-me.html" checked> about-me.html
+            </label><br>
+            <label>
+                <input type="checkbox" name="contact-us.html" value="contact-us.html" checked> contact-us.html
+            </label><br>
+            <button type="button" onclick="showCheckedItems()">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+        
+        <div class="result-list" id="result-list"></div>
+
+        <script>
+            function showCheckedItems() {
+                // 获取所有被选中的复选框
+                var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+                
+                // 获取用于显示结果的 div 元素
+                var resultList = document.getElementById('result-list');
+                
+                // 清空之前的结果
+                resultList.innerHTML = '';
+
+                // 创建并添加 "Completed List" 标题
+                var title = document.createElement('h2');
+                title.textContent = 'Completed List';
+                resultList.appendChild(title);
+        
+                // 如果有复选框被选中
+                if (checkboxes.length > 0) {
+                    // 创建一个新的 ol 元素
+                    var ol = document.createElement('ol');
+                    
+                    // 遍历所有被选中的复选框
+                    checkboxes.forEach(function(checkbox) {
+                        // 为每个被选中的复选框创建一个新的 li 元素
+                        var li = document.createElement('li');
+                        // 设置 li 元素的文本内容为复选框的值
+                        li.textContent = checkbox.value;
+                        // 将 li 元素添加到 ul 元素中
+                        ol.appendChild(li);
+                    });
+                    
+                    // 将 ol 元素添加到结果列表 div 中
+                    resultList.appendChild(ol);
+                } else {
+                    // 如果没有复选框被选中，显示 "No items selected."
+                    resultList.textContent = 'No items selected.';
+                }
+            }
+        </script>
+        </section>
+        
+        <p></p>
+        <hr>
+
+        <h2>Challenges</h2>
+        <div class="container mt-5">
+            <div class="row">
+              <div class="col-sm-4">
+                <h3>Searching for pictures</h3>
+                <p>I need a large number of images, so finding high-quality photos is a significant task that takes a lot of my time. Additionally, there are some background images for which I couldn't find suitable options, so I need to create them myself using Canva.</p>
+              </div>
+              <div class="col-sm-4">
+                <h3>Interactive effects</h3>
+                <p>I want users to be able to see what Chinese cuisine has to offer based on pictures, so I spent some time researching how to implement this using JavaScript.</p>
+              </div>
+              <div class="col-sm-4">
+                <h3>CSS</h3>        
+                <p>I want the page to look beautiful, so I want to adjust the layout and layout of the page as much as possible, for example, I want the width of each input box to be the same in the contact us page, and I spent some time working on these details.</p>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+    </body>
+
+</html>

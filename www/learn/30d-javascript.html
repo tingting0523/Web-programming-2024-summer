@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Recipes Search</title>
+    <style>
+        #recipe-list li { margin: 5px 0; }
+        #search-box { width: 100%; padding: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Search for Chinese Recipes</h1>
+    <input type="text" id="search-box" placeholder="Type to search...">
+
+    <ul id="recipe-list">
+        <li>Kung Pao Chicken</li>
+        <li>Sweet and Sour Pork</li>
+        <li>Mapo Tofu</li>
+        <li>Peking Duck</li>
+        <li>Spring Rolls</li>
+        <li>Hot and Sour Soup</li>
+    </ul>
+
+    <script>
+        document.getElementById('search-box').addEventListener('keyup', function() {
+            var filter = this.value.toLowerCase();
+            var recipes = document.querySelectorAll('#recipe-list li');
+
+            recipes.forEach(function(recipe) {
+                var text = recipe.textContent.toLowerCase();
+                if (text.includes(filter)) {
+                    recipe.style.display = '';
+                } else {
+                    recipe.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

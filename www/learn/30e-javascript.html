@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Recipes Gallery</title>
+    <style>
+        .gallery img { width: 100px; height: 100px; margin: 5px; cursor: pointer; }
+        #hotpot { display: block; margin: 20px auto; max-width: 500px; }
+    </style>
+</head>
+<body>
+    <h1>Chinese Recipes Gallery</h1>
+
+    <div class="gallery">
+        <img src="img/hotpot.jpg" data-large="img/hotpot.jpg" alt="Recipe 1">
+        <img src="img/cook.jpg" data-large="img/cook.jpg" alt="Recipe 2">
+        <img src="img/play.jpg" data-large="img/play.jpg" alt="Recipe 3">
+    </div>
+
+    <img id="hotpot" src="img/hotpot.jpg" alt="hotpot">
+
+    <script>
+        document.querySelectorAll('.gallery img').forEach(function(thumbnail) {
+            thumbnail.addEventListener('click', function() {
+                var largeImageSrc = thumbnail.getAttribute('data-large');
+                document.getElementById('hotpot').src = largeImageSrc;
+            });
+        });
+    </script>
+</body>
+</html>

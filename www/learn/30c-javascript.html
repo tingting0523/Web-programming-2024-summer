@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        #timer { font-size: 48px; }
+    </style>
+</head>
+<body>
+    <h1>Countdown Timer</h1>
+    <div id="timer">10:00</div>
+    <button onclick="startTimer()">Start</button>
+
+    <script>
+        var timer;
+        var minutes = 10;
+        var seconds = 0;
+
+        function startTimer() {
+            clearInterval(timer);
+            timer = setInterval(function() {
+                if (seconds === 0) {
+                    if (minutes === 0) {
+                        clearInterval(timer);
+                        alert('Time is up!');
+                        return;
+                    } else {
+                        minutes--;
+                        seconds = 59;
+                    }
+                } else {
+                    seconds--;
+                }
+                updateTimerDisplay();
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            var minuteText = minutes < 10 ? '0' + minutes : minutes;
+            var secondText = seconds < 10 ? '0' + seconds : seconds;
+            document.getElementById('timer').textContent = minuteText + ':' + secondText;
+        }
+    </script>
+</body>
+</html>

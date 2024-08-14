@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content= "width=device-width, initial-scale=1.0"> 
+        <title>57-tables.html - Tingting Chen</title>
+        <!--
+        <link rel="stylesheet" type="text/css" href="css/00-template01.css">
+        -->
+
+        <style>
+            table.fullwide{width:100%; 
+                           border:5px solid red;
+                           border-collapse: collapse;
+                           }
+            thead, tfoot{background-color: pink;}
+            tbody{background-color: lightblue;}
+
+            .left {text-align:left;}
+            .right {text-align:right;}
+            .center {text-align: center;}
+
+            th, td.fullwide {padding: 10px;   /*行间距设置*/
+                             border: solid 1px black;}
+            
+            table.fullwide tr:nth-child(even){background-color: lightgreen;}   /*不同行交叉颜色*/
+            
+            figure, figcaption {
+                               margin: 0;
+                               padding: 0; }
+            figure {
+                               border: 1px solid black;
+                               width: 450px;
+                               padding: 15px; }
+            figcaption {
+                               display: block;
+                               font-weight: bold;
+                               text-align: center;
+                               font-size: 120%;
+                               padding-bottom: .25em; }
+
+        </style>
+
+    </head>
+
+    <body>
+        <h1>57-tables.html</h1>
+
+        <hr>
+        <!--table 1-->
+        <table>
+            <tr>
+                <td>99</td>
+                <td>11</td>
+                <td>33333</td>
+                <td>55</td>
+            </tr>
+            <tr>
+                <td>99</td>
+                <td>11444</td>
+                <td>33</td>
+                <td>55</td>
+            </tr>
+            <tr>
+                <td>99</td>
+                <td>11</td>
+                <td>33</td>
+                <td>55</td>
+            </tr>
+        </table>
+
+        <hr>
+        <!--table 2-->
+        <table border="1">   <!--add border-->
+            <tr>
+                <th>ID</th>   <!--fond bold-->
+                <th>Description</th>
+                <th>QTY</th>
+                <th>Sales</th>
+            </tr>
+            <tr>
+                <td>99</td>   
+                <td>XXX</td>
+                <td>33</td>
+                <td>55</td>
+            </tr>
+            <tr>
+                <td>99</td>
+                <td>YYYY</td>
+                <td>33</td>
+                <td>55</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <!--table 3-->
+        <h2>Table 3 - class = "fullwide"</h2>
+        <table class="fullwide" border="1">   
+            <thead>
+                <tr>
+                    <th>ID</th>   
+                    <th>Description</th>
+                    <th>QTY</th>
+                    <th>Sales</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>99</td>   
+                    <td>XXX</td>
+                    <td>33</td>
+                    <td>55</td>
+                </tr>
+                <tr>
+                    <td>99</td>
+                    <td>YYYY</td>
+                    <td>33</td>
+                    <td>55</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <th>ID</th>   
+                    <th>Description</th>
+                    <th>QTY</th>
+                    <th>Sales</th>
+                </tr>
+            </tfoot>
+        </table>
+
+        <hr>
+
+        <!--table 4-->
+        <h2>Table 4 - class = "fullwide" figcaption</h2>
+        <table class="fullwide" border="1">   
+            <thead>
+                <tr>
+                    <th>ID</th>   
+                    <th>Description</th>
+                    <th>QTY</th>
+                    <th>Sales</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td class="center">99</td>   
+                    <td>XXX</td>
+                    <td class="right">3,000</td>
+                    <td class="right">55,500.00</td>
+                </tr>
+                <tr>
+                    <td class="center" >99</td>
+                    <td>YYYY</td>
+                    <td class="right">3,000</td>
+                    <td class="right">5,500.00</td>
+                </tr>
+                <tr><td class="center" >99</td><td>YYYY</td><td class="right">3,000</td><td class="right">5,500.00</td></tr>
+                <tr><td class="center" >99</td><td>YYYY</td><td class="right">3,000</td><td class="right">5,500.00</td></tr>
+                <tr><td class="center" >99</td><td>YYYY</td><td class="right">3,000</td><td class="right">5,500.00</td></tr>
+                <tr><td class="center" >99</td><td>YYYY</td><td class="right">3,000</td><td class="right">5,500.00</td></tr>
+                <tr><td class="center" >99</td><td>YYYY</td><td class="right">3,000</td><td class="right">5,500.00</td></tr>
+                <tr><td class="center" >99</td><td>YYYY</td><td class="right">3,000</td><td class="right">5,500.00</td></tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <th class="right" colspan="2">Total</th>     <!--合并单元格（行）-->
+                    <th>3,500</th>
+                    <th>$6,000</th>
+                </tr>
+            </tfoot>
+        </table>
+
+        <hr>
+
+        <!--table 5-->
+        <h2>Table 5 - class = "fullwide" </h2>
+        <figure>
+            <figcaption>Learning figcaption CSS</figcaption>
+            <table class="fullwide" border="1">
+               <thead>
+                  <tr>
+                     <th>ID</th>
+                     <th>Description</th>
+                     <th>Qty</th>
+                     <th>Sales</th>
+                  </tr>
+               </thead>
+               <tr>
+                  <td>99</td>
+                  <td>XX</td>
+                  <td>67</td>
+                  <td>GG</td>
+               </tr>
+               <tr>
+                  <td>
+                     <img src="img/img-avatar.png">
+                  </td>
+                  <td>
+                     <a href="54-fonts.html" title="Click me to learn about fonts">Learn about fonts here</a>
+                  </td>
+                  <td>67</td>
+                  <td>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam natus libero veritatis aliquam itaque doloribus sapiente similique commodi quia at, placeat quisquam sunt dolores, expedita recusandae rem corrupti, error eos!</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>99</td>
+                  <td>XX</td>
+                  <td>676767</td>
+                  <td>GGGGGGGG</td>
+               </tr>
+               <tr>
+                  <td rowspan="3">Row info</td>
+                  <td>XX</td>
+                  <td>676767</td>
+                  <td>GGGGGGGG</td>
+               </tr>
+               <tr>
+                  <td>XX</td>
+                  <td>676767</td>
+                  <td>GGGGGGGG</td>
+               </tr>
+               <tr>
+                  <td>XX</td>
+                  <td>676767</td>
+                  <td>GGGGGGGG</td>
+               </tr>
+               <tfoot>
+                  <tr>
+                     <th>ID</th>
+                     <th>Description</th>
+                     <th>Qty</th>
+                     <th>Sales</th>
+                  </tr>
+               </tfoot>
+            </table>
+         </figure>
+         <hr>
+
+        <hr>
+
+
+    </body>
+
+</html>

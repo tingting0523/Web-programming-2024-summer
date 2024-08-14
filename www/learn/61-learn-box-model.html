@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content= "width=device-width, initial-scale=1.0"> 
+        <title>61-learn-box-model.html - Tingting Chen</title>
+        <style>
+            body {background-color: #FFFFAA;
+                  border: 3px dotted black;
+                  margin: 30px;
+                  padding: 10px;
+                  font-family:Arial, Helvetica, sans-serif;
+                }
+
+            main {background-color: #D4D46A;
+                  border:  5px double blueviolet;   /* solid-实线 double-双实线 dotted-虚线 https://developer.mozilla.org/en-US/docs/Web/CSS/border*/
+                  border-radius: 10px 20px 0 20px;   /* 圆角边框：分别设置四个角的半径，顺时针顺序：左上角、右上角、右下角、左下角*/
+                  // width:   500px;     /*设置固定宽度*/
+                  width:   70%;          /*设置比例宽度*/
+                  margin:  20px; 
+                  padding: 10px; 
+                }
+            h1 {background-color: cornflowerblue;
+                padding:20px;
+                color: aqua;
+                border-radius: 10px 20px;  /* 圆角边框：分别设置两个对角的半径，前两个值：左上角/右下角，后两个值：右上角/左下角 */
+                }
+            h2 {
+                background-color: #808015;
+                border-radius: 10px;  /* 圆角边框：单一半径，四个角相同 */
+                padding: 5px;
+                }
+            p {
+                // background-color: #D4EE9F;
+                margin:0;
+                margin-top:20px;   /*设置元素顶部的外边距：增大上下内容距离*/
+                padding-left: 15px;
+                padding-bottom: 10px;
+                // padding: 15px;
+                }
+            
+            section {
+                padding: 20px;
+                width: 50%;
+                border: 5px double blue;
+                color: blue;
+                font-size: 200%;
+                text-align: center;
+                font-weight: bold; 
+                border-radius: 10px 20px 0 20px;
+                box-shadow: 3px 3px 4px 4px red;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <h1>61-learn-box-model.html</h1>
+        <main>
+            <h2>Sub-topic 1</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, iure. Iste architecto voluptate voluptatum natus, doloremque molestias ratione, a similique ab facilis ducimus aspernatur voluptatibus modi. Labore quisquam eos sequi.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, iure. Iste architecto voluptate voluptatum natus, doloremque molestias ratione, a similique ab facilis ducimus aspernatur voluptatibus modi. Labore quisquam eos sequi.</p>
+            
+            <section>Sub-topic 2</section>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, iure. Iste architecto voluptate voluptatum natus, doloremque molestias ratione, a similique ab facilis ducimus aspernatur voluptatibus modi. Labore quisquam eos sequi.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, iure. Iste architecto voluptate voluptatum natus, doloremque molestias ratione, a similique ab facilis ducimus aspernatur voluptatibus modi. Labore quisquam eos sequi.</p>
+        
+        </main>
+
+
+
+    </body>
+
+</html>

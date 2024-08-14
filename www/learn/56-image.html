@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content= "width=device-width, initial-scale=1.0"> 
+        <title>00-template02.html - Tingting Chen</title>
+        <style>
+            .responsive {
+                width: 100%;
+                height: auto;
+            }
+            .responsive25 {
+                width: 25%;
+                height: auto;
+            }
+
+            figure {float: left;
+                    margin-right: 1.5em; }
+            figcaption {display: block;
+                        font-weight: bold;
+                        padding-top: .25em;
+                        margin-bottom: 1em;
+                        border-bottom: 1px solid black; }
+            
+            .lastLeft{clear:left}
+            .lastRight{clear:right}
+
+            .img middle{vertical-align: middle;
+                margin-right: 10px;   }
+            .img top{vertical-align: top;
+                margin-right: 10px;   }
+            .img bottom{vertical-align: bottom;
+                margin-right: 10px;   }
+
+            img.floatMeLeft{float: left;
+                        margin-top: 0px;
+                        margin-bottom: 10px;}
+            img.floatMeRight{float: right;
+                        margin-top: 0px;
+                        margin-bottom: 10px;}
+            
+            #image1 {background-image: url("img/img-avatar.png");
+            width: 200px;
+            height: 150px;}
+            #image1:hover {background-image: url("img/paul-gruhn.jpg");}
+
+        </style>
+    </head>
+
+    <body>
+        <h1>56-image.html</h1>
+        <h2>Important Links</h2>
+
+        <h2><a href="https://pixlr.com/express/" target="_blank">Online Photo Edito - Pixlr</a></h2>
+        <h2><a href="https://www.gimp.org/downloads/" target="_blank">Download GIMP photo editor</a></h2>
+        <h2><a href="https://thenounproject.com/" target="_blank">The Noun Project Icons</a></h2>
+        <h2><a href="https://thenounproject.com/browse/icons/term/verb/" target="_blank">The Verb Project Icons</a></h2>
+        <hr>
+        www.freeimages.com  <br>
+        www.freefoto.com<br>
+        www.openphoto.net<br>
+        www.google.com/imghp <br>
+        Popular websites for stock photos<br>
+        www.istockphoto.com<br>
+        www.gettyimages.com<br>
+        A popular search engine for stock photos<br>
+        www.everystockphoto.com<br>
+        <hr>
+        <h2>Today's image Lesson</h2>
+
+        <h3>dover-camera.jpg - FULL SIZE (3,371 KB)</h3>
+        Picture is commented out, it's huge!
+        <!--
+        <img src="img/dover-camera.jpg"><br> 
+        -->
+        <hr>
+<h3>dover-camera.jpg (width="300") - FULL SIZE (3,371 KB)</h3>
+<img src="img/dover-camera.jpg" width="300"><br> 
+<hr>
+
+<h3>dover-camera.jpg (width="100%") - FULL SIZE (3,371 KB)</h3>
+<img src="img/dover-camera.jpg" width="100%"><br> 
+<hr>
+
+<h3>dover-camera.jpg (responsive CSS) - FULL SIZE (3,371 KB)</h3>
+<img src="img/dover-camera.jpg" class="responsive"><br> 
+<hr>
+
+<h3>dover-camera.jpg (responsive25 CSS) - FULL SIZE (3,371 KB)</h3>
+<img src="img/dover-camera.jpg" class="responsive25"><br> 
+<hr>
+
+<h3>dover-mobile.jpg  (33 KB)</h3>
+<img src="img/dover-mobile.jpg">
+<br><br>
+
+<hr>
+<h3>dover-medium.jpg  (122 KB)</h3>
+<img src="img/dover-medium.jpg">
+<br>
+<h3>dover-medium.jpg  (122 KB) width 100%</h3>
+<img src="img/dover-medium.jpg" width="100%">
+<br>
+<h3>dover-medium.jpg - Using "responsive" class (122 KB)</h3>
+<span><img src="img/dover-medium.jpg" class="responsive"></span>
+<br>
+<h3>dover-medium.jpg - Using "responsive25" class (122 KB)</h3>
+<span><img src="img/dover-medium.jpg" class="responsive25"></span>
+<hr>
+
+<h3>dover-small.jpg  (## KB)</h3>
+<img src="img/dover-smallx.jpg" alt="dover-small.jpg TEXT I WROTE">
+<br><br>
+<img src="img/dover-smallx.jpg" alt="dover-small.jpg TEXT I WROTE" title="click Me to go to webpage">
+<br><br>
+<h3>dover-small.jpg - Using "img.responsive" class (122 KB)</h3>
+<img class= "responsive" src="img/dover-small.jpg">
+<hr>
+
+<!--图片为链接-->
+<h3>dover-thumbnail.jpg - using LINKABLE tag</h3>
+<a href="http://www.doverspeedway.com" target="_blank">
+  <img src="img/dover-thumbnail.jpg" title="Click here for Racing at the Monster Mile" alt="Link to Dover website" target="_blank">
+</a>
+<hr>
+
+<h3>[figure & figcaption tags] dover-medium.jpg - Using "responsive25" class (122 KB)</h3>
+<figure>
+    <img src="img/dover-medium.jpg" class="responsive25" alt="dover race image">
+    <figcaption width="25">Two race cars at Dover</figcaption>
+</figure>
+<hr>
+<hr class="lastLeft">
+
+<hr>
+<h3>dover-thumbnail.jpg - class=top,middle,bottom THUMBNAIL (24 KB)</h3>
+<img class="top" src="img/dover-thumbnail.jpg"> I am at the top!<br><br>
+<h3>dover-thumbnail.jpg - class=middle THUMBNAIL (24 KB)</h3>
+<img class="middle" src="img/dover-thumbnail.jpg">I am in the middle!<br><br>
+<h3>dover-thumbnail.jpg - class=bottom THUMBNAIL (24 KB)</h3>
+<img class="bottom" src="img/dover-thumbnail.jpg">I am at the bottom!
+
+<hr>
+<h3>dover-thumbnail.jpg - class=floatMeLeft THUMBNAIL (24 KB)</h3>
+<img class="floatMeLeft top" src="img/dover-thumbnail.jpg">
+<p>
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+</p>
+
+
+<hr>
+<h3>dover-thumbnail.jpg - class=floatMeRight THUMBNAIL (24 KB)</h3>
+<img class="floatMeRight top" src="img/dover-thumbnail.jpg">
+<p>
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+</p>
+<hr class="lastRight">
+
+
+<h3>Image Rollover CSS</h3>
+
+<a href="http://simplystreet.com" target="_blank">
+     <p id="image1"></p>
+</a>
+
+<hr>
+<h3>End of page</h3>
+
+
+    </body>
+
+</html>
