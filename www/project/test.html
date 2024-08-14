@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Cook Meat in Chinese</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+}
+
+ol {
+    margin-left: 1.5rem;
+}
+
+video {
+    width: 100%;
+    max-width: 600px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>How to Cook Meat in Chinese Style</h1>
+    </header>
+    <main>
+        <section id="intro">
+            <h2>Introduction</h2>
+            <p>Learn the basics of cooking meat in Chinese style.</p>
+        </section>
+        <section id="ingredients">
+            <h2>Ingredients</h2>
+            <ul>
+                <li>Beef or Chicken</li>
+                <li>Soy Sauce</li>
+                <li>Ginger</li>
+                <li>Garlic</li>
+                <li>Spring Onions</li>
+                <li>Vegetable Oil</li>
+                <li>Chinese Five Spice</li>
+            </ul>
+        </section>
+        <section id="steps">
+            <h2>Steps</h2>
+            <ol>
+                <li>Marinate the meat with soy sauce, ginger, garlic, and Chinese five spice.</li>
+                <li>Heat oil in a pan over medium heat.</li>
+                <li>Add the marinated meat and cook until browned.</li>
+                <li>Add spring onions and stir-fry until cooked through.</li>
+                <li>Serve hot with rice or noodles.</li>
+            </ol>
+        </section>
+        <section id="video">
+            <h2>Watch the Recipe</h2>
+            <video controls>
+                <source src="cooking-meat.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Cooking Tips</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+});
+    </script>
+</body>
+</html>

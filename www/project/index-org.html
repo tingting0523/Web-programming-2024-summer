@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>82-bootstrap-page01.html - Prof. Paul Gruhn</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content= "width=device-width, initial-scale=1.0"> 
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/my-css-file.css">
+        <style>
+            body {background-color: beige;}
+            .pizza {background-color: gray;}
+            
+        
+          </style>
+    </head>
+
+    <body>
+            <nav class="navbar navbar-expand-sm pizza navbar-dark">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="index.php">Home LOGO</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" href="about-us.html">About Us</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Recipes list                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="meat.html">Meat</a></li>
+                          <li><a class="dropdown-item" href="vegetable.html">Vegetable</a></li>
+                          <li><a class="dropdown-item" href="hotpot.html">Hotpot</a></li>
+                          <li><a class="dropdown-item" href="staples.html">Staples</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="11-my-hobbies.html">Contact Us</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+
+
+        <div id="main" class="container-fluid">
+            <div class="row p-3 text-center">
+              <h1>My First Bootstrap Page</h1>
+              <p>This part is inside a .container-fluid class.</p>
+              <p>The .container-fluid class provides a full width container, spanning the entire width of the viewport.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>Title Here</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur tempore quod optio tempora. Aperiam eius libero iste voluptatum nostrum nisi sint, necessitatibus magni enim aliquam soluta officiis consectetur fugiat unde.</p>
+                </div>
+                <div class="col-md-6">
+                    <h3>Title Here</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, voluptatibus? Facilis, exercitationem impedit. Quia illo nemo quas enim eius nam eveniet exercitationem velit tenetur, illum nesciunt odit unde aliquam expedita!</p>
+            
+                </div>
+                <div class="col-md-3">
+                    <h3>Title Here</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam voluptate odio doloribus voluptatem libero vero ipsa iusto pariatur alias rem sequi nulla eius incidunt molestiae quo est, commodi soluta eligendi.</p>
+                </div>
+              </div>
+
+
+              <div class="row">
+                <div class="col-md-4">
+                    <img class="img-fluid" src="img/supermoon.jpg" alt="Supermoon">
+                </div>
+                <div class="col-md-8">
+                    <h2>About the Moon</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat consequuntur, libero modi dolorem vitae provident architecto, corrupti iusto tenetur, ratione voluptatem eius amet omnis exercitationem et saepe vel? Molestias, laborum!</p>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-8">
+                    <h2>About the Moon</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat consequuntur, libero modi dolorem vitae provident architecto, corrupti iusto tenetur, ratione voluptatem eius amet omnis exercitationem et saepe vel? Molestias, laborum!</p>
+                </div>
+                <div class="col-md-4">
+                    <img class="img-fluid rounded-circle" src="img/supermoon.jpg" alt="Supermoon">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4">
+                    <h2>Card Image</h2>
+                    <p>Image at the top (card-img-top):</p>
+                    <div class="card" style="width:400px">
+                      <img class="card-img-top" src="img/paul-gruhn.jpg" alt="Card image" style="width:100%">
+                      <div class="card-body">
+                        <h4 class="card-title">John Doe</h4>
+                        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+                        <a href="#" class="btn btn-primary">See Profile</a>
+                      </div>
+                    </div>
+                </div>
+
+            <div class="col-md-8">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam animi quasi reiciendis sapiente magnam ratione facilis vel. Voluptatum cumque libero nobis asperiores quaerat numquam a? Hic quaerat explicabo inventore nesciunt.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div id="accordion">
+                    <div class="card">
+                      <div class="card-header">
+                        <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+                          About the Prof
+                        </a>
+                        <img class="card-img-top" src="img/paul-gruhn.jpg" alt="Card image" style="width:100%">
+                      </div>
+                      <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+                        <div class="card-body">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header">
+                        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+                        Collapsible Group Item #2
+                      </a>
+                      </div>
+                      <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                        <div class="card-body">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header">
+                        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+                          Collapsible Group Item #3
+                        </a>
+                      </div>
+                      <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+                        <div class="card-body">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+         </div>
+        
+        
+        
+
+
+
+
+
+        
+
+        </div>
+    </body>
+</html>

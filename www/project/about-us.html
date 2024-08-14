@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>About Us</title>
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <link rel="stylesheet" href="css/final-project-style.css">
+      <link rel="icon" type="image/x-icon" href="./favicon-aboutus.ico">
+      <script>
+         function handleFormSubmit(event) {
+            event.preventDefault(); 
+            alert("You have successfully submitted your contact information and we will contact you as soon as possible!");
+         }
+      </script>
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-sm recipe navbar-light">
+         <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+               <ul class="navbar-nav">
+                  <li>
+                     <a href="index.html">
+                       <img src="img/logo.png" alt="Home" width="100" height="40">
+                     </a>
+                   </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="about-us.html">About Us</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Recipes list</a>
+                     <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="meat.html">Meat</a></li>
+                        <li><a class="dropdown-item" href="vegetable.html">Vegetable</a></li>
+                        <li><a class="dropdown-item" href="hotpot.html">Hotpot</a></li>
+                        <li><a class="dropdown-item" href="staples.html">Staples</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="contact-us.html">Contact Us</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+
+      <main>
+        <section class="about-us-section">
+          <h2>Our Story</h2>
+          <div class="content-wrapper">
+              <p>Welcome to Chinese Recipes! We are passionate about bringing authentic and delicious Chinese cuisine to your table. Our journey began with a deep love for traditional recipes passed down through generations, coupled with a desire to share these cherished dishes with the world. We believe that food is a universal language that connects people and cultures, and we are dedicated to offering a genuine taste of China through our carefully curated recipes. Whether you're a seasoned chef or someone new to Chinese cooking, our recipes are designed to be approachable and enjoyable. If you also have a love for Chinese food and a curiosity to explore new flavors, we invite you to join us on this culinary adventure. Let's celebrate the richness of Chinese cuisine together and bring a touch of its magic into your kitchen! Click <a href="contact-us.html">here</a> to contact us! </p>
+              <img src="img/about-welcome.png" alt="Our story" class="about-image">
+          </div>
+        </section>
+
+        <section class="about-us-section">
+          <h2>Our Mission</h2>
+          <div class="content-wrapper">
+              <p>Our mission is to celebrate the rich culinary heritage of China by offering a curated selection of recipes that highlight the diverse flavors and techniques of Chinese cooking. We strive to make traditional recipes accessible and enjoyable for everyone, whether you’re a seasoned chef or a curious beginner. Our goal is to share the depth and variety of Chinese cuisine through detailed recipes, insightful cooking tips, and educational resources. By demystifying traditional techniques and ingredients, we aim to inspire a love for Chinese food and encourage home cooks to explore new culinary horizons. We believe that everyone should have the opportunity to experience the joy of creating and savoring authentic Chinese dishes, bringing the vibrant tastes and cultural richness of China into kitchens around the world.</p>
+              <img src="img/about-mission.png" alt="Our Mission" class="about-image">
+          </div>
+        
+        </section>
+
+        <section class="my-4">
+            <h2>Meet the Team</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <img src="img/about-member1.gif" alt="Team Member 1" class="img-fluid rounded-circle">
+                        <h3>Jane Doe</h3>
+                        <p>Founder & Chef</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <img src="img/about-member2.gif" alt="Team Member 2" class="img-fluid rounded-circle">
+                        <h3>John Smith</h3>
+                        <p>Head Recipe Developer</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <img src="img/about-member3.gif" alt="Team Member 3" class="img-fluid rounded-circle">
+                        <h3>Emily Chen</h3>
+                        <p>Marketing & Outreach</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+      </main>
+      <footer class="recipe">
+         <p>&copy; 2024 Chinese Recipes</p>
+         <p><a href="contact-us.html">JOIN US</a></p>
+      </footer>
+   </body>
+</html>

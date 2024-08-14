@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Contact Us</title>
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <link rel="stylesheet" href="css/final-project-style.css">
+      <link rel="icon" type="image/x-icon" href="./favicon-contactus.ico">
+      <script>
+         function handleFormSubmit(event) {
+            event.preventDefault(); 
+            alert("You have successfully submitted your contact information and we will contact you as soon as possible!");
+         }
+      </script>
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-sm recipe navbar-light">
+         <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+               <ul class="navbar-nav">
+                  <li>
+                     <a href="index.html">
+                       <img src="img/logo.png" alt="Home" width="100" height="40">
+                     </a>
+                   </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="about-us.html">About Us</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Recipes list</a>
+                     <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="meat.html">Meat</a></li>
+                        <li><a class="dropdown-item" href="vegetable.html">Vegetable</a></li>
+                        <li><a class="dropdown-item" href="hotpot.html">Hotpot</a></li>
+                        <li><a class="dropdown-item" href="staples.html">Staples</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="contact-us.html">Contact Us</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+
+      <main>
+        <p style="text-align: center; font: italic small-caps bold 20px/2 cursive;">Thank you for visiting Chinese Recipes.</p>
+        <p style="text-align: center; font: italic small-caps bold 20px/2 cursive;">If you want to know more about our website or if you have any suggestions, please feel free to contact us.</p>
+        <p style="text-align: center; font: italic small-caps bold 20px/2 cursive;">We are waiting for you.</p>
+         <section class="contact-form">
+            <form id="contactForm" action="/submit" method="post" onsubmit="handleFormSubmit(event)">
+               <label for="name">Name<span style="color: red;">*</span>:</label>
+               <input type="text" id="name" name="name" required>
+               <label for="email">Email<span style="color: red;">*</span>:</label>
+               <input type="email" id="email" name="email" required>
+               <label for="phone">Phone:</label>
+               <input type="phone" id="phone" name="phone">
+               <label for="message">Message<span style="color: red;">*</span>:</label>
+               <textarea id="message" name="message" rows="4" required></textarea>
+               <button type="submit">Send Message</button>
+            </form>
+         </section>
+      </main>
+      <footer class="recipe">
+         <p>&copy; 2024 Chinese Recipes</p>
+      </footer>
+   </body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+      <title>vegetable.html - Tingting Chen</title>
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/final-project-style.css">
+      <link rel="icon" type="image/x-icon" href="./favicon-vegetable.ico">
+      <style>
+        #searchBox {
+        padding: 10px;
+        font-size: 16px;
+        width: 80%;
+        max-width: 600px;
+        margin-top: 10px;
+        }
+        .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+        padding: 20px;
+        max-width: 90%; /* Adjust this value as needed */
+        margin: 0 auto; /* Center the gallery */
+        }
+        .image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        width: 200px; /* Fixed width */
+        height: 200px; /* Increased height to accommodate text */
+        overflow: hidden;
+        border: 1px solid #ddd; /* Optional border around each container */
+        cursor: pointer; /* Make images look clickable */
+        }
+        .image-container img {
+        width: 100%;
+        height: 150px; /* Fixed height for image */
+        object-fit: cover; /* Ensures the image covers the container without distortion */
+        transition: border 0.3s;
+        }
+        .image-container p {
+        margin: 5px 0;
+        font-size: 14px; /* Adjust font size if needed */
+        }
+        #recipeDetails {
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        max-width: 90%;
+        display: none; /* Hide initially */
+        }
+      </style>
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-sm recipe navbar-light">
+         <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+               <ul class="navbar-nav">
+                  <li>
+                     <a href="index.html">
+                     <img src="img/logo.png" alt="Home" width="100" height="40">
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="about-us.html">About Us</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Recipes list</a>
+                     <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="meat.html">Meat</a></li>
+                        <li><a class="dropdown-item" href="vegetable.html">Vegetable</a></li>
+                        <li><a class="dropdown-item" href="hotpot.html">Hotpot</a></li>
+                        <li><a class="dropdown-item" href="staples.html">Staples</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="contact-us.html">Contact Us</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <header>
+         <h1>Vegetable Gallery</h1>
+         <input type="text" id="searchBox" placeholder="Search for vegetables...">
+      </header>
+      <div id="gallery" class="gallery">
+         <div class="image-container" onclick="showRecipe('Hot Pepper')">
+            <img src="img/hotpot-vegetable0.png" alt="Image 1" data-tag="Hot Pepper">
+            <p>Hot Pepper</p>
+         </div>
+         <div class="image-container" onclick="showRecipe('Lettuce')">
+            <img src="img/hotpot-vegetable2.png" alt="Image 2" data-tag="Lettuce">
+            <p>Lettuce</p>
+         </div>
+         <div class="image-container" onclick="showRecipe('Cabbage')">
+            <img src="img/hotpot-vegetable3.png" alt="Image 3" data-tag="Cabbage">
+            <p>Cabbage</p>
+         </div>
+         <div class="image-container" onclick="showRecipe('Mushroom')">
+            <img src="img/hotpot-vegetable4.png" alt="Image 4" data-tag="Mushroom">
+            <p>Mushroom</p>
+         </div>
+         <div class="image-container" onclick="showRecipe('Kelp')">
+            <img src="img/hotpot-vegetable5.png" alt="Image 5" data-tag="Kelp">
+            <p>Kelp</p>
+         </div>
+         <div class="image-container" onclick="showRecipe('Fermented Cabbage')">
+            <img src="img/hotpot-vegetable6.png" alt="Image 6" data-tag="Fermented Cabbage">
+            <p>Fermented Cabbage</p>
+         </div>
+         <div class="image-container" onclick="showRecipe('Spinach')">
+            <img src="img/vegetable-Spinach.png" alt="Image 7" data-tag="Spinach">
+            <p>Spinach</p>
+         </div>
+         <div class="image-container" onclick="showRecipe('Broccoli')">
+            <img src="img/vegetable-Broccoli.png" alt="Image 8" data-tag="Broccoli">
+            <p>Broccoli</p>
+         </div>
+         <div class="image-container" onclick="showRecipe('Potato')">
+            <img src="img/vegetable-Potato.png" alt="Image 9" data-tag="Potato">
+            <p>Potato</p>
+         </div>
+         <div class="image-container" onclick="showRecipe('Sweet Potato')">
+            <img src="img/vegetable-Sweet Potato.png" alt="Image 10" data-tag="Sweet Potato">
+            <p>Sweet Potato</p>
+         </div>
+         <div class="image-container" onclick="showRecipe('Onion')">
+            <img src="img/vegetable-Onion.png" alt="Image 11" data-tag="Onion">
+            <p>Onion</p>
+         </div>
+         <div class="image-container" onclick="showRecipe('Tomato')">
+            <img src="img/vegetable-Tomato.png" alt="Image 12" data-tag="Tomato">
+            <p>Tomato</p>
+         </div>
+         <div class="image-container" onclick="showRecipe('Cucumber')">
+            <img src="img/vegetable-Cucumber.png" alt="Image 13" data-tag="Cucumber">
+            <p>Cucumber</p>
+         </div>
+         <div class="image-container" onclick="showRecipe('Corn')">
+            <img src="img/vegetable-Corn.png" alt="Image 14" data-tag="Corn">
+            <p>Corn</p>
+         </div>
+         <div class="image-container" onclick="showRecipe('Asparagus')">
+            <img src="img/vegetable-Asparagus.png" alt="Image 15" data-tag="Asparagus">
+            <p>Asparagus</p>
+         </div>
+         <div class="image-container" onclick="showRecipe('Radish')">
+          <img src="img/vegetable-Radish.png" alt="Image 16" data-tag="Radish">
+          <p>Radish</p>
+         </div>
+         <div class="image-container" onclick="showRecipe('Bell Pepper')">
+          <img src="img/vegetable-Bell Pepper.png" alt="Image 17" data-tag="Bell Pepper">
+          <p>Bell Pepper</p>
+         </div>
+         <div class="image-container" onclick="showRecipe('Peas')">
+          <img src="img/vegetable-Peas.png" alt="Image 18" data-tag="Peas">
+          <p>Peas</p>
+         </div>
+         <!-- Add more images as needed -->
+      </div>
+      <div id="recipeDetails">
+        <h2 id="recipeTitle"></h2>
+        <p id="recipeContent"></p>
+      </div>
+      <script>
+         document.addEventListener("DOMContentLoaded", function() {
+         var searchBox = document.getElementById("searchBox");
+         var gallery = document.getElementById("gallery");
+         
+         searchBox.addEventListener("input", function() {
+         var query = searchBox.value.toLowerCase();
+         var images = gallery.getElementsByTagName("img");
+         
+         // Remove existing highlights
+         for (var i = 0; i < images.length; i++) {
+             //images[i].classList.remove("highlight");
+             images[i].parentElement.style.display = "none"; // Hide all images initially
+         }
+         
+         // Show matching images
+         for (var i = 0; i < images.length; i++) {
+             var tag = images[i].getAttribute("data-tag").toLowerCase();
+             if (tag.includes(query)) {
+                 //images[i].classList.add("highlight");
+                 images[i].parentElement.style.display = "block"; // Show matching image
+             }
+         }
+         });
+         });
+
+         function showRecipe(vegetable) {
+            var recipes = {
+               "Hot Pepper": "Prepare fresh hot peppers, remove seeds, and cut into thin strips. Heat a small amount of oil in a pan and stir-fry the pepper strips for 1-2 minutes. Add chopped garlic and ginger, continue to stir-fry until fragrant. Season with salt and a splash of soy sauce. Serve hot as a side dish.",
+               "Lettuce": "Wash and tear the lettuce into bite-sized pieces. Heat a small amount of oil in a pan and add minced garlic. Stir-fry the garlic until fragrant, then add the lettuce. Stir-fry for 1-2 minutes until the lettuce is slightly wilted. Season with salt and a splash of soy sauce. Serve immedia.",
+               "Cabbage": "Chop the cabbage into bite-sized pieces. Heat oil in a pan and add sliced garlic and ginger. Add the cabbage and stir-fry for 3-4 minutes. Season with soy sauce and a pinch of salt. Cook until tender and serve hot.",
+               "Mushroom": "Clean and slice the mushrooms. Heat oil in a pan and add minced garlic. Add the mushrooms and stir-fry for 5-6 minutes until they are golden brown. Season with salt, pepper, and a splash of soy sauce. Serve warm.",
+               "Kelp": "Soak dried kelp in water for 30 minutes. Cut into thin strips. Blanch the kelp in boiling water for 2-3 minutes. Drain and toss with sesame oil, soy sauce, and a pinch of sugar. Serve chilled or at room temperature.",
+               "Fermented Cabbage": "Rinse fermented cabbage to remove excess salt. Stir-fry with minced garlic and ginger in a small amount of oil for 2-3 minutes. Add a splash of rice vinegar and sugar to balance the flavors. Serve as a side dish.",
+               "Spinach": "Wash the spinach thoroughly. Blanch in boiling water for 1 minute, then immediately transfer to ice water. Drain and squeeze out excess water. Toss with soy sauce, sesame oil, and a sprinkle of sesame seeds. Serve chilled.",
+               "Broccoli": "Cut the broccoli into florets. Steam or blanch in boiling water for 3-4 minutes until tender but still crisp. Heat oil in a pan and add minced garlic. Add the broccoli and stir-fry for 2 minutes. Season with salt and a splash of soy sauce. Serve hot.",
+               "Potato": "Peel and cut potatoes into cubes. Boil until tender. Drain and mash with butter, milk, salt, and pepper. Serve as a creamy mashed potato side dish.",
+               "Sweet Potato": "Peel and slice sweet potatoes into thin rounds. Toss with olive oil, salt, and cinnamon. Roast in the oven at 400°F (200°C) for 25-30 minutes until crispy.",
+               "Onion": "Slice onions thinly. Heat oil in a pan, add onions and cook over low heat, stirring occasionally, until caramelized (about 20-30 minutes). Season with salt and serve as a topping or side.",
+               "Tomato": "Chop tomatoes and mix with diced onions, chopped cilantro, lime juice, salt, and pepper. Serve as a fresh tomato salsa or salad.",
+               "Cucumber": "Slice cucumbers thinly. Toss with rice vinegar, sugar, and salt. Let it sit for 10 minutes. Serve as a refreshing cucumber salad.",
+               "Corn": "Boil or grill corn on the cob until tender. Spread with butter and sprinkle with salt. Serve hot.",
+               "Asparagus": "Trim and blanch asparagus in boiling water for 2-3 minutes. Transfer to ice water, then drain. Toss with olive oil, lemon juice, salt, and pepper. Serve chilled or at room temperature.",
+               "Radish": "Thinly slice radishes. Toss with olive oil, lemon juice, salt, and pepper. Serve as a crisp radish salad.",
+               "Bell Pepper": "Slice bell peppers into strips. Stir-fry with olive oil, garlic, and a pinch of salt for 5-6 minutes until tender. Serve warm.",
+               "Peas": "Boil peas until tender, about 3-4 minutes. Drain and toss with butter, salt, and a sprinkle of fresh mint. Serve as a side dish."
+            };
+            var recipeTitle = document.getElementById("recipeTitle");
+            var recipeContent = document.getElementById("recipeContent");
+            var recipeDetails = document.getElementById("recipeDetails");
+
+            recipeTitle.textContent = vegetable;
+            recipeContent.textContent = recipes[vegetable];
+            recipeDetails.style.display = "block"; // Show the recipe details container
+            recipeDetails.scrollIntoView({ behavior: "smooth" }); // Scroll to the recipe details
+         }
+      </script>
+      <footer class="recipe">
+         <p>&copy; 2024 Chinese Recipes</p>
+         <p><a href="contact-us.html">JOIN US</a></p>
+      </footer>
+   </body>
+</html>

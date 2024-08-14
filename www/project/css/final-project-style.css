@@ -1,0 +1,228 @@
+body {background-color: #FFFBDA;
+      grid-template-rows: 1fr auto;
+}
+
+.recipe {background-color: #FFBB70;
+         color:#555;
+}
+
+header {
+    background-color: #FFFBDA;
+    color: #FFBB70;
+    padding: 0.2rem;
+    text-align: center;
+}
+
+main {
+    padding: 2rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 1rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.about-us-section {
+    margin-bottom: 2rem;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center; /* Align items vertically center */
+    justify-content: space-between; /* Space between text and image */
+}
+
+.content-wrapper p {
+    flex: 1; /* Text takes up remaining space */
+    margin-right: 1rem; /* Space between text and image */
+}
+
+.about-image {
+    width: 15%; /* Adjust size as needed */
+    height: auto;
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+}
+.text-content {
+    flex: 1;
+    margin-right: 20px;
+    color:black;
+    margin-bottom: 2px; /* 调整此值以缩短间距 */
+}
+#slider {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    height: 440px; /* Set the height of the slider */
+}
+#slider img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+#slider img.active {
+    opacity: 1;
+}
+
+
+.ctr-accordion {
+    max-width: 100%; 
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center; 
+    gap: 10px; 
+    overflow: hidden;
+    margin: 0; 
+    padding: 100px; 
+    }
+.tab {
+        position: relative;
+        width: 33.33%; 
+        height: 100%; 
+        padding: 5px;
+        background: rgb(150,150,150);
+        cursor: pointer;
+        transition: width .5s ease;
+        border-radius: 25px;
+        border: 2px solid black;
+        }
+.tab img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.5s ease;
+        border-radius: 25px;
+        }
+.tab:hover img {
+        opacity: 1;
+        }
+.tab:hover {
+        width: 50%;
+        }
+
+.tab-text {
+            margin-top: 5px; /* Space between image and text */
+            font-size: 16px; /* Adjust font size */
+            color: #333; /* Adjust text color */
+        }
+
+.refreshment-list {
+            background-color: #f9f9f9; /* 设置背景颜色 */
+            border: 1px solid #ddd; /* 添加边框 */
+            border-radius: 5px; /* 添加圆角 */
+            padding: 20px; /* 添加内边距 */
+            margin: 20px 0; /* 添加外边距 */
+            font-size: 16px; /* 设置字体大小 */
+            line-height: 1.6; /* 设置行高 */
+        }
+
+.refreshment-list:hover {
+            background-color: #f1f1f1; /* 悬停时改变背景颜色 */
+        }
+
+#demotext {
+            color: rgb(255, 255, 255);
+            background-color: #FFEC9E;
+            text-shadow: rgb(122, 122, 122) 4px 3px 0px;
+            text-align: center;
+            font-size: 34px;
+            }
+
+#demotext2 {
+            color: rgb(255, 255, 255);
+            background-color: #FFEC9E;
+            text-shadow: rgb(122, 122, 122) 4px 3px 0px;
+            text-align: center;
+            font-size: 34px;
+            }            
+
+.accordion {
+            background-color: #FFEC9E;  color: #FFBB70;
+            cursor: pointer;  padding: 18px;  width: 100%;  border: none;
+            text-align: left;  outline: none;  font-size: 15px;  transition: 0.4s;
+            }
+                  
+.active, .accordion:hover { background-color: #567714; }
+                  
+.panel {  padding: 0 18px;  
+          display: none;  
+          background-color: #FFFBDA; }
+
+.video-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin-right: 20px;
+        }
+.cover-image {
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+            text-align: center;
+        }
+.video-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150px;
+            height: 150px;
+            display: none;
+            text-align: center;
+        }
